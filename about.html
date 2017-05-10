@@ -1,0 +1,143 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>IL3D</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background-image: url(IM1.jpg);">
+        <div class="main">
+            <div class="header">
+                <div class="header_resize">
+                    <div class="logo">
+                        <h1><a href="index.html"><span>I</span>L <small>Coating & filling models </small></a></h1>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html" class="active">Algorytm</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="contact.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="headert_text_resize">
+                    <div class="headert_text">
+                        <h2>Deescription of the alghorithm </h2>
+                        <p><span>On this page you will be able to read about the alghoritm</span></p>
+                        <p>The idea is based on the external and internal coverage of space using the n-plane rectangles, that are commonly used in functional analysis.
+                        My alghoritm realises the coating of a 3-D model and her "filling"(which is invisble, because of the cubes) with the use of cubes with a set size without any shifting between them<br></p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="body">
+                <div class="body_resize">
+                    <!--<div class="left">-->
+                        <div class="resize_bg">
+                            <h2> 2-D Alghoritm</h2>
+                            <p1>
+                                Input data is a set of vertexes, each previous connected with the next one and the last with the first one, which creates the polygon.
+                                We take each segment and cover it with squares, so that, for example, this segment will be located on y = kx + b, and on the ends of the squares in each column the
+                                value on the borders of the squares of our line would be contained in the squares, precisely in the column of our squares.
+                                <br />
+                                That way we are coating the limits of the polygon with squares. Let us say, that the polygon is containted in a particular rectangle, frankly speaking, 
+                                we are covering the rectangle with other squares and we are doing this for all the external space of the rectangle, except for the limit squares of the polygon. 
+                                If besides of each of the internal squares of the polygon at least one is one of him limit squares(from the left, top, right or bottom) we mark him as the square,
+                                that will be external for the polygon.<br />
+                                Finally, we make the conclusion, that all squares that are not the limit ones or the external ones in a specific rectangle of our polygon, then they are internal.
+                                Of course, the is a possibility of them being no internal as welll, however, we are checking this, as we are transitioning from continuos into a discrete space. 
+                              
+                            </p1>
+                            <!--<p> <a href="#">Read more • Comments (2)</a></p>
+                            <p>&nbsp;</p>-->
+                            <h2> 3-D Alghoritm</h2>
+                            <div class="clr"></div>
+                            <p1>
+                                If we are talking about the 3-dimensional space, the idea of the alghoritm is fairly similar. We take the polygon and find the cubes, that are limit cubes for him.
+                                To continue, we are making an analogy that the model is contained in a specific 3-dimensional parallelogram, we find the external cubes and in relation to them 
+                                we find the internal once. 
+                                The difference is in the fact, that when the internal cube will not even be, in fact, internal, we will not even see him when drawing the limit cubes. 
+                                <br />
+                                When we are coating the polygon with cubes, we find that plane, the angle of which will be less than 45 degrees, we will "throw away" one of the coordinates(for example, the minimum angle
+                                between the polygon and the plane XY, then we are "throwing away" the z coordinate) and using the 2-D alghoritm.
+                                The choice of the angle gives us a unique feature, which allows us for each of the squares found the amount of cubes will not be more than 3(theoretically 2, 
+                                however, it is well known that the computer caulcations are not always precise).
+                                
+                            </p1>
+                            <!--<p> <a href="#">Read more • Comments (5)</a></p>
+                            <h2>&nbsp;</h2>-->
+                        </div>
+                    <!--</div>-->
+                    <!--<div class="right">
+                        <div class="resize_bg">
+                            <h2>Sponsors</h2>
+                            <ul class="sponsors">
+                                <li class="sponsors">
+                                    <a href="#">Lorem ipsum dolor</a><br />
+                                    Donec libero. Suspendisse bibendum
+                                </li>
+                                <li class="sponsors">
+                                    <a href="#">Donec mattis</a><br />
+                                    Phasellus suscipit, leo a pharetra
+                                </li>
+                                <li class="sponsors">
+                                    <a href="#">Dui pede condimentum</a><br />
+                                    Tellus eleifend magna eget
+                                </li>
+                                <li class="sponsors">
+                                    <a href="#">Condimentum lorem</a><br />
+                                    Curabitur vel urna in tristique
+                                </li>
+                                <li class="sponsors">
+                                    <a href="#">Fringilla velit magna</a><br />
+                                    Cras id urna orbi tincidunt orci ac
+                                </li>
+                                <li class="sponsors">
+                                    <a href="#">Suspendisse bibendum</a><br />
+                                    purus nec placerat bibendum
+                                </li>
+                            </ul>
+                        </div>
+                    </div>-->
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <!--<div class="FBG">
+              <div class="FBG_resize">
+                <div class="blok">
+                  <h2>Image <span>Gallery</span></h2>
+                  <img src="images/gallery_1.jpg" alt="" width="95" height="94" /><img src="images/gallery_2.jpg" alt="" width="95" height="94" /><img src="images/gallery_3.jpg" alt="" width="95" height="94" /> <img src="images/gallery_1.jpg" alt="" width="95" height="94" />
+                  <div class="clr"></div>
+                  <h2>Lorem <span>ipsum</span> </h2>
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. <a href="#">Cras id urna</a>. Morbi tincidunt, orci ac convallis aliquam, lectus turpis. varius lorem, eu posuere nunc justo tempus leo. </p>
+                </div>
+                <div class="blok">
+                  <h2>About</h2>
+                  <img src="images/fbg_1.jpg" alt="" width="96" height="96" />
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. <a href="#">Learn more...</a><br />
+                  </p>
+                </div>
+                <div class="blok">
+                  <h2>Contact</h2>
+                  <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.<br />
+                    Donec mattis, purus nec placerat ibendum, dui pede condimentum odio, ac blandit ante orci ut diam.<br />
+                    <br />
+                    E-mail: <a href="#">support@yoursite.com</a><br />
+                    Telephone : +1 (123) 444-5677<br />
+                    +1 (123) 444-5677<br />
+                    +1 (123) 444-5677</p>
+                </div>
+                <div class="clr"></div>
+              </div>
+            </div>-->
+            <div class="footer">
+                <div class="footer_resize">
+                    <p class="lf">All Rights Reserved</p>
+                    <p class="rf">Get More <a target="_blank" href="https://github.com/Nekrokit/IL3D/">On Git Hub</a></p>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </body>
+</html>
