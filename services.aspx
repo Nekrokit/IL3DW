@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="contact.aspx.cs" Inherits="contact" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="services.aspx.cs" Inherits="services" %>
 
 <!DOCTYPE html>
 
@@ -18,14 +18,13 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">Algorytm</a></li>
-                        <li><a href="services.aspx">Services</a></li>
-                        <li><a href="contact.aspx?vis=0" class="active">Contact Us</a></li>
+                        <li><a href="services.aspx" class="active">Services</a></li>
+                        <li><a href="contact.aspx?vis=0">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="clr"></div>
             </div>
-
-            <div class="headert_text_resize">
+             <div class="headert_text_resize">
                 <div class="headert_text">
                     <h2>Лишіть ваші відгуки </h2>
                     <p><span>Ми з радістю прочитаємо та оцінемо ваші відгуки та ідеї. По мірі можливості проект може змінитися на краще, у вас всі шанси </span></p>
@@ -33,38 +32,29 @@
                 <div class="clr"></div>
             </div>
         </div>
-
-        <div class="body">
+         <div class="body">
             <div class="body_resize">
                     <div class="resize_bg">
-                        <h2> Contact Us</h2>
-                        <div runat="server" id="thanksDiv" visible ="false">
-                            <p>Thank you for your message, we will review it.</p>
-                        </div>
-                        <form action="#" method="post" id="contactform" runat="server">
+
+                        <h2> Send Model</h2>
+
+                        <form id="main" runat ="server" enctype="multipart/form-data" method ="post">
                             <ol>
                                 <li>
-                                    <label for="name">Your Name*</label>
-                                    <input id="name" name="name" class="text"  runat="server"/>
+                                    <label for="name">Choose *.obj file </label>
+                                    <input type="file" id ="obj" runat="server"/>
                                 </li>
                                 <li>
-                                    <label for="email">E-Mail*</label>
-                                    <input id="email" name="email" class="text"  runat="server"/>
-                                </li>
-                                <li>
-                                    <label for="company">Entity</label>
-                                    <input id="company" name="company" class="text"  runat="server"/>
-                                </li>
-                                <li>
-                                    <label for="message">Your Message*</label>
-                                    <textarea id="message" name="message" rows="6" cols="50" runat="server"></textarea>
+                                    <label for="name">Choose *.mtl file </label>
+                                    <input type="file" id ="mtl" runat="server"/>
                                 </li>
                                 <li class="buttons">
-                                    <asp:Button id="imageField" Text="Send message" OnClick="SaveMessage" runat="server"/>
+                                    <input type="submit" id="Submit" value="Save Files" class="send" runat ="server"/>
                                     <div class="clr"></div>
                                 </li>
                             </ol>
-                        </form>
+                        </form>                        
+
                 </div>
                 <div class="clr"></div>
             </div>
