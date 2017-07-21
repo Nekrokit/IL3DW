@@ -17,8 +17,9 @@
                 <div class="menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Algorytm</a></li>
+                        <li><a href="about.aspx">Algorytm</a></li>
                         <li><a href="services.aspx" class="active">Services</a></li>
+                        <li><a href="History.aspx">History</a></li>
                         <li><a href="contact.aspx?vis=0">Contact Us</a></li>
                     </ul>
                 </div>
@@ -37,16 +38,14 @@
                     <div class="resize_bg">
 
                         <h2> Send Model</h2>
-
-                        <form id="main" runat ="server" enctype="multipart/form-data" method ="post">
+                        <div id="gif" runat="server" visible="false">
+                            <img src="border_helix_line_red_animation_clipart.GIF" />
+                        </div>
+                        <form id ="form" class="form" runat ="server" enctype="multipart/form-data" method ="post" visible="true">
                             <ol>
                                 <li>
-                                    <label for="name">Choose *.obj file </label>
-                                    <input type="file" id ="obj" runat="server"/>
-                                </li>
-                                <li>
-                                    <label for="name">Choose *.mtl file </label>
-                                    <input type="file" id ="mtl" runat="server"/>
+                                    <label for="obj">Choose *.obj file </label>
+                                    <input type="file" id ="obj" runat="server" aria-haspopup="False" translate="no"/>
                                 </li>
                                 <li class="buttons">
                                     <input type="submit" id="Submit" value="Save Files" class="send" runat ="server"/>
@@ -54,7 +53,6 @@
                                 </li>
                             </ol>
                         </form>                        
-
                 </div>
                 <div class="clr"></div>
             </div>
@@ -62,7 +60,7 @@
         <div class="footer">
             <div class="footer_resize">
                 <p class="lf">All Rights Reserved</p>
-                <p class="rf">Get More <a target="_blank" href="https://github.com/Nekrokit/IL3D/">On Git Hub</a></p>
+                <p class="rf">Get More <a target="_blank" href="https://github.com/Nekrokit/IL3D/" class="hyperlinkW">On Git Hub</a></p>
                 <div class="clr"></div>
             </div>
             <div class="clr"></div>

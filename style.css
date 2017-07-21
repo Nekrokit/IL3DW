@@ -107,7 +107,7 @@ h1 small {
 .menu {
 	padding:0;
 	margin:70px 0 0 0;
-	width:360px;
+	width:450px;
 	float:right;
 	background:#fcfdfe;
 	border:1px solid #dfdfdf;
@@ -364,26 +364,40 @@ h1 small {
 	text-decoration:none;
 }
 .footer .lf {
+    color:white;
 	vertical-align:bottom;
 	float:left;
 }
 .footer .rf {
+    color:white;
 	vertical-align:bottom;
 	float:right;
 }
-#contactform {
+.hyperlinkW:link, .hyperlinkW:visited, .hyperlinkW:active, .hyperlinkW:hover {
+    color: white !important;
+    text-decoration:none;
+}
+.hyperlink a {
+    color: black !important;
+}
+.dataGidHeader {
+    color: white;
+    border-color: black !important;
+    font-weight: bold;
+}
+.form {
 	margin:0;
 	padding:5px 10px;
 }
-#contactform * {
+.form * {
 	color:#F00;
 }
-#contactform ol {
+.form ol {
 	margin:0;
 	padding:0;
 	list-style:none;
 }
-#contactform li {
+.form li {
 	margin:0;
 	padding:0;
 	background:none;
@@ -391,10 +405,10 @@ h1 small {
 	display:block;
 	clear:both;
 }
-#contactform li.buttons {
+.form li.buttons {
 	margin:5px 0 5px 0;
 }
-#contactform label {
+.form label {
 	margin:0;
 	width:110px;
 	display:block;
@@ -404,10 +418,10 @@ h1 small {
 	text-transform:capitalize;
 	float:left;
 }
-#contactform label span {
+.form label span {
 	color:#F00;
 }
-#contactform input.text {
+.form input.text {
 	width:480px;
 	border:1px solid #c0c0c0;
 	margin:2px 0;
@@ -416,7 +430,7 @@ h1 small {
 	background:#fff;
 	float:left;
 }
-#contactform textarea {
+.form textarea {
 	width:480px;
 	border:1px solid #c0c0c0;
 	margin:2px 0;
@@ -424,7 +438,7 @@ h1 small {
 	background:#fff;
 	float:left;
 }
-#contactform li.buttons input {
+.form li.buttons input {
 	border:1px solid #000;
 	background:#ea7d1b;
 	padding:10px;
@@ -432,6 +446,7 @@ h1 small {
 	color:#fff;
 	float:left;
 	font:normal 12px Arial, Helvetica, sans-serif;
+    width: 175px;
 }
 p.response {
 	text-align:center;

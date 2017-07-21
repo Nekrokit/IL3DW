@@ -17,8 +17,9 @@
                 <div class="menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">Algorytm</a></li>
+                        <li><a href="about.aspx">Algorytm</a></li>
                         <li><a href="services.aspx">Services</a></li>
+                        <li><a href="History.aspx">History</a></li>
                         <li><a href="contact.aspx?vis=0" class="active">Contact Us</a></li>
                     </ul>
                 </div>
@@ -41,7 +42,7 @@
                         <div runat="server" id="thanksDiv" visible ="false">
                             <p>Thank you for your message, we will review it.</p>
                         </div>
-                        <form action="#" method="post" id="contactform" runat="server">
+                        <form action="#" method="post" id="contactform" class="form" runat="server">
                             <ol>
                                 <li>
                                     <label for="name">Your Name*</label>
@@ -72,7 +73,7 @@
         <div class="footer">
             <div class="footer_resize">
                 <p class="lf">All Rights Reserved</p>
-                <p class="rf">Get More <a target="_blank" href="https://github.com/Nekrokit/IL3D/">On Git Hub</a></p>
+                <p class="rf">Get More <a target="_blank" href="https://github.com/Nekrokit/IL3D/" class="hyperlinkW">On Git Hub</a></p>
                 <div class="clr"></div>
             </div>
             <div class="clr"></div>
