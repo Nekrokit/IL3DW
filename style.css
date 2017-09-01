@@ -375,7 +375,10 @@ h1 small {
 }
 .hyperlinkW:link, .hyperlinkW:visited, .hyperlinkW:active, .hyperlinkW:hover {
     color: white !important;
-    text-decoration:none;
+}
+.hyperlinkH a {
+    color: black !important;
+    text-decoration: none !important;
 }
 .hyperlink a {
     color: black !important;
@@ -442,7 +445,7 @@ h1 small {
 	border:1px solid #000;
 	background:#ea7d1b;
 	padding:10px;
-	margin:10px 0 0 110px;
+	margin:0 0 0 0px;
 	color:#fff;
 	float:left;
 	font:normal 12px Arial, Helvetica, sans-serif;

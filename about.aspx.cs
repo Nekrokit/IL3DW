@@ -11,7 +11,7 @@ public partial class about : System.Web.UI.Page
     {
         if(IsPostBack)
         {
-            string filename = "ILT_1_5_3.exe";
+            string filename = "IL3DConvertingApplication.7z";
             if (filename != "")
             {
                 string path = Server.MapPath(filename);

@@ -31,28 +31,29 @@ public partial class History : System.Web.UI.Page
                     foreach(var temp in System.Configuration.ConfigurationManager.AppSettings)
                     {
                         Pair newPair = new Pair();
-                        newPair.First = temp.ToString(); ;
+                        newPair.First = temp.ToString();
                         newPair.Second = System.Configuration.ConfigurationManager.AppSettings[newPair.First.ToString()].ToString();
                         statuses.Add(newPair);
                     }
                     foreach(Pair temp in statuses)
                     {
-                        if(tmp.Cells[1].Text == temp.Second.ToString())
+                        if(tmp.Cells[1].Text == temp.Second.ToString().Split(';')[0])
                         {
                             tmp.Cells[1].Text = temp.First.ToString();
                         }
                     }
                     switch (tmp.Cells[1].Text)
                     {
-                        case "FileGet": tmp.BackColor = Color.Brown; break;
-                        case "WorkBegin": tmp.BackColor = Color.Gold; break;
-                        case "Done": tmp.BackColor = Color.YellowGreen; break;
-                        case "Error": tmp.BackColor = Color.Tomato; break;
+                        case "FileGet": tmp.BackColor = Color.White; tmp.Cells[1].Text = GetValueFromKey("FileGet", 1); break;
+                        case "WorkBegin": tmp.BackColor = Color.Gold; tmp.Cells[1].Text = GetValueFromKey("WorkBegin", 1); break;
+                        case "Done": tmp.BackColor = Color.YellowGreen; tmp.Cells[1].Text = GetValueFromKey("Done", 1); break;
+                        case "Error": tmp.BackColor = Color.Red; tmp.Cells[1].Text = GetValueFromKey("Error", 1); break;
                         default:
                             tmp.BackColor = Color.White; break;
                     }
-                    if (tmp.Cells[1].Text != "Done")
+                    if (tmp.Cells[1].Text != GetValueFromKey("done", 1))
                     {
+                        tmp.Cells[0].CssClass = "hyperlinkH";
                         tmp.Cells[0].Enabled = false;
                     }
                 }
@@ -60,14 +61,16 @@ public partial class History : System.Web.UI.Page
             }
         }
     }
-
+    private string GetValueFromKey(string Key, int Number)
+    {
+        return System.Configuration.ConfigurationManager.AppSettings[Key].ToString().Split(';')[Number];
+    }
     private void BindData()
     {
-
         string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["ConnecStr"].ConnectionString;
         SqlConnection db = new SqlConnection(connectionString);
         db.Open();
-        SqlCommand select = new SqlCommand("SELECT ID, FileName, Status FROM MainTable ORDER BY Status DESC, FileName", db);
+        SqlCommand select = new SqlCommand("SELECT ID, FileName, Status FROM MainTable ORDER BY DataAdd, Status DESC", db);
         da = new SqlDataAdapter(select);
         da.Fill(ds);
         select.ExecuteNonQuery();

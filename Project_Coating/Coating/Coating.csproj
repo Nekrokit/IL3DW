@@ -33,9 +33,6 @@
     <Reference Include="CjClutter.ObjLoader.Loader">
       <HintPath>.\CjClutter.ObjLoader.Loader.dll</HintPath>
     </Reference>
-    <Reference Include="ITL_1_5_3_DLL">
-      <HintPath>.\ITL_1_5_3_DLL.dll</HintPath>
-    </Reference>
     <Reference Include="ObjParser">
       <HintPath>.\ObjParser.dll</HintPath>
     </Reference>
@@ -48,8 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBCon.cs" />
     <Compile Include="IL3DCDLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Work.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITL_1_5_3_DLL\ITL_1_5_3_DLL.csproj">
+      <Project>{67123a49-735a-4878-b014-03cc847855e8}</Project>
+      <Name>ITL_1_5_3_DLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
