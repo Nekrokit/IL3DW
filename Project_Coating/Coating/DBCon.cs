@@ -16,6 +16,7 @@ namespace Coating
         private static DBCon con;
         private DBCon(string con)
         {
+            connectionString = con;
             db = new SqlConnection(connectionString);
             db.Open();
         }
